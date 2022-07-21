@@ -8,5 +8,5 @@ while [ "$COUNTER" -lt 10 ]; do
 	then
 	    echo "Hi"
 	fi
-	COUNTER=$COUNTER+1
+	(( COUNTER=COUNTER+1 ))
 done
