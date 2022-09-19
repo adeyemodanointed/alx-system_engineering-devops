@@ -2,6 +2,7 @@
 
 file {'/etc/ssh/ssh_config'
   path => '/etc/ssh/ssh_config',
+}
 
 class { '::ssh::sshd_config':
   options	=> {
