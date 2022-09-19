@@ -1,6 +1,6 @@
 #Puppet config to change ssh_config
 
-file {'/etc/ssh/ssh_config'
+file {'/etc/ssh/ssh_config':
   path => '/etc/ssh/ssh_config',
 }
 
