@@ -1,4 +1,5 @@
-
+#The Assignment
+#Script adds 8080 to port list
 server {
         listen 80 default_server;
         listen 8080;
