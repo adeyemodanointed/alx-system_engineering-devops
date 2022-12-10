@@ -1,5 +1,5 @@
 file { '/tmp/school':
-    ensure  => 'present',
+    ensure  => present,
     group   => 'www-data',
     owner   => 'www-data',
     content => 'I love Puppet',
