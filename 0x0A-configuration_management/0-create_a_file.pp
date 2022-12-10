@@ -1,3 +1,4 @@
+# Creates a fie /tmp/school
 file { '/tmp/school':
     ensure  => present,
     group   => 'www-data',
