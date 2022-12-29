@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Custom error page
+
+ERROR_TEXT="Ceci n'est pas une page"
+
+echo "$ERROR_TEXT" | sudo tee /var/www/html/custom_404.html
+sudo sed -i '/^\slocation.*/i \        error_page 404 /custom_404.html;' /etc/nginx/sites-available/default
+sudo service nginx start
