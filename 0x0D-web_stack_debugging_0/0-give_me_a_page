@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Fix holberton server to be accessible on port 8080
+
+sudo service apache2 start
