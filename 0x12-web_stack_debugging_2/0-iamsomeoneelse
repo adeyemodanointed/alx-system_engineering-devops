@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Prints out the user calling the script
+
+sudo -u $1 whoami
