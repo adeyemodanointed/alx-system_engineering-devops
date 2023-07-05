@@ -4,7 +4,7 @@ package { 'nginx':
 }
 
 # Set custom HTTP header in Nginx configuration
-file { '/etc/nginx/conf.d/custom_headers.conf':
+file { '/etc/nginx/sites-available/default':
   ensure  => present,
   content => "location / {
     add_header X-Served-By $hostname;
