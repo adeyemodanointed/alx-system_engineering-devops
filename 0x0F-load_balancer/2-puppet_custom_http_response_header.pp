@@ -2,13 +2,16 @@
 package { 'nginx':
   ensure => installed,
 }
-
+file_line { 'add_x_served_by':
+  path  => '/path/to/your/file',
+  line  => '  X-served By',
+  match => 'location \/ {',
+}
 # Set custom HTTP header in Nginx configuration
-file { '/etc/nginx/sites-available/default':
-  ensure  => present,
-  content => "location / {
-    add_header X-Served-By $hostname;
-  }",
+file_line { 'add_x_served_by':
+  path  => '/etc/nginx/sites-available/default',
+  line  => '\t\tadd_header X-Served-By $HOSTNAME',
+  match => '\tlocation \/ {',
   notify  => Service['nginx'],
 }
 
